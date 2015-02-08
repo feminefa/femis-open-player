@@ -1,5 +1,5 @@
 # femis-open-player
-Opensource Audio Player for Android
+Free Audio Player for Android
 
 FOP allows you play and organize your audio files on you android device.
 
@@ -18,7 +18,9 @@ Clean and User friendly UI.<Br>
 # Version and Device Support
 Tested on Lenovo, Samsung and Techno devices. I believe it should work on most android devices running the Android API Level 3 (Android 1.5) and above.
 
-# Screen short
+# Screen shots
+![alt tag](https://raw.githubusercontent.com/feminefa/femis-open-player/master/Screenshot_2015-02-07-22-02-38.png)
+![alt tag](https://raw.githubusercontent.com/feminefa/femis-open-player/master/Screenshot_2015-02-07-22-02-51.png)
 
 #Theme
 Developers can create new themes on http://android-holo-colors.com/</br>
