@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+   android:onClick="doNothing"
+    >
+    <ImageView
+					    android:id="@+id/found_album_art"
+					    android:layout_width="fill_parent"
+					    android:layout_height="0dip"
+					    android:layout_marginTop="20dip"
+					    android:layout_weight="1"
+					    android:padding="20dip"
+					    android:scaleType="centerCrop"
+					    android:src="@drawable/ic_launcher" />
+				
+     
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:layout_weight="0"
+		        	android:gravity="center"
+		        	android:orientation="vertical"
+		         >
+
+					
+						<LinearLayout
+						    android:id="@+id/action_but_lv"
+						    android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_weight="1"
+						    android:background="@drawable/strim_background"
+						    android:gravity="bottom|center"
+						    android:orientation="vertical" >
+						    
+						<TextView
+						    android:id="@+id/found_song_title"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:textColor="#ffffff"
+						    android:textStyle="bold"
+						    />
+						<TextView
+						    android:id="@+id/found_song_artist"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:textColor="#ffffff"
+						    android:textSize="12sp"
+						    android:textStyle="italic"
+						    />
+						<LinearLayout 
+						     android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:orientation="horizontal"
+						    android:gravity="center"				 >
+						    <Button 
+						        android:id="@+id/found_play_but"
+						        android:layout_width="wrap_content"
+						        android:layout_margin="5dip"
+						        android:text="Listen"
+						        android:textSize="14sp"
+						        android:textStyle="bold"
+						        android:background="@drawable/grey_button"
+						        android:layout_height="30dip"
+						        />
+						     <Button
+						        android:id="@+id/found_download_but"
+						        android:layout_width="wrap_content"
+						        android:layout_margin="5dip"
+						        android:textSize="14sp"
+						        android:textStyle="bold"
+						        android:layout_height="30dip"
+						        android:text="Download"
+						        android:background="@drawable/grey_button"
+						        />
+						</LinearLayout>		
+						
+					</LinearLayout>
+    		</LinearLayout>
+    		
+		    <LinearLayout
+		          	android:layout_width="fill_parent"
+		        	android:layout_height="100dip"
+		        	android:orientation="vertical"		        	
+		        	android:layout_weight="0"
+         			android:background="#E67300"  
+		        >   
+ 			<RelativeLayout
+		          	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"		        	
+		        	android:padding="5dip"
+         			android:background="#E67300"  
+		        >   
+   			 <TextView 
+   			    android:id="@+id/buffering_text"
+   			    android:layout_width="fill_parent"
+   			    android:layout_height="wrap_content"
+   			    android:text="@string/buffering"
+   			    android:textStyle="italic"
+   			    android:textColor="#ffffff"
+   			    android:textSize="11sp"
+   			    android:visibility="invisible"
+   			    android:layout_alignParentTop="true"
+   			    />
+		      <LinearLayout
+		          	android:layout_width="fill_parent"
+		        	android:layout_height="fill_parent"
+		        	android:orientation="horizontal"
+		        	android:padding="5dip"
+		        	android:gravity="center"
+		        >
+				    
+				        <ImageView 
+				            android:id="@+id/found_start_taggin_but"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:src="@drawable/logo"
+				            android:background="@drawable/orimi_button_states"
+				            />
+
+				 
+          		</LinearLayout>
+     </RelativeLayout>
+     </LinearLayout>
+</LinearLayout>

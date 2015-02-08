@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="femi.com.ng"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.1" ><!-- use numbers only -->
+
+    <uses-sdk
+        android:minSdkVersion="3"
+        android:targetSdkVersion="19" />
+
+    <!-- So we can play songs while the device is locked -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- So we can save new Playlists on the disc -->
+     <uses-permission android:name="android.permission.RECORD_AUDIO" />     
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+ <uses-permission android:name="android.permission.VIBRATE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Myactionbar"  >
+        
+       <activity
+            android:name="femi.com.ng.core.activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop" >
+            
+            <!-- This is how we know this is the main Activity to
+                 start first -->
+                 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>  
+        
+        <activity
+            android:name="femi.com.ng.core.activities.SongGroupActivity"
+            android:label="@string/menu_music_albums"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:parentActivityName="femi.com.ng.core.activities.MainActivity">
+                <meta-data
+                        android:name="android.support.PARENT_ACTIVITY"
+                        android:value="femi.com.ng.core.activities.MainActivity" />
+        </activity>
+        <activity
+                android:name="femi.com.ng.core.activities.UpdateAppActivity"
+                android:label="Update"
+                android:launchMode="standard"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.MainActivity">
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".core.activities.MainActivity" />
+    </activity>
+
+        <activity
+                android:name="femi.com.ng.core.activities.AmazonActivity"
+                android:label="Music Store"
+                android:launchMode="standard"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".core.activities.MainActivity" />
+        </activity>
+
+
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/app_id" />
+        <activity
+                android:name="femi.com.ng.core.activities.LoginActivity"
+                android:label="Music Store"
+                android:launchMode="standard"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".core.activities.MainActivity" />
+        </activity>
+        <activity
+                android:name="com.facebook.LoginActivity"
+                android:label="Music Store"
+                android:launchMode="standard"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.LoginActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".core.activities.LoginActivity" />
+        </activity>
+        <activity
+                android:name="femi.com.ng.core.activities.SettingsActivity"
+                android:label="@string/settings"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.MainActivity" >
+                <meta-data
+                        android:name="android.support.PARENT_ACTIVITY"
+                        android:value=".core.activities.MainActivity" />
+        </activity>
+        <activity
+                android:name="femi.com.ng.core.activities.SongSubGroupActivity"
+                android:label="@string/menu_music_albums"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.SongGroupActivity"
+                />
+        <activity
+                android:name="femi.com.ng.core.activities.SubSongActivity"
+                android:label="@string/menu_music_albums"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.SongsActivity"
+                />
+        <activity
+                android:name="femi.com.ng.core.activities.ArtistActivity"
+                android:label="@string/menu_music_artists"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.MainActivity"
+                />
+        <activity
+                android:name="femi.com.ng.core.activities.SongsActivity"
+                android:label="@string/menu_music_songs"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"
+                android:parentActivityName="femi.com.ng.core.activities.MainActivity"
+                />
+
+            
+
+
+        
+
+        
+        <activity
+            android:name="femi.com.ng.kure.musicplayer.activities.ActivityListSongs"
+            android:label="@string/songs"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />   
+            
+        <activity
+            android:name="femi.com.ng.kure.musicplayer.activities.XXX"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />   
+            
+        <activity
+            android:name="femi.com.ng.kure.musicplayer.services.ServicePlayMusic"
+            android:label="@string/songs"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />      
+            
+
+        
+        <!-- Services (run on the background)
+         -->
+        <service android:name="femi.com.ng.kure.musicplayer.services.ServicePlayMusic" />
+        <service android:name="femi.com.ng.kure.musicplayer.services.ServiceScrobbleMusic" />
+        <!-- Allows specific classes to handle broadcasts
+          -  (on this case, two buttons clicked on the Notification)
+         -->
+        <receiver android:name="femi.com.ng.kure.musicplayer.NotificationMusic$NotificationPlayButtonHandler" />
+        <receiver android:name="femi.com.ng.kure.musicplayer.NotificationMusic$NotificationSkipButtonHandler" />
+        <receiver android:name="femi.com.ng.core.activities.MainActivity$StartedPlaying" />
+
+        <receiver android:name="femi.com.ng.core.activities.MainActivity$StartedPlaying">
+            <intent-filter>
+                <action android:name="femi.com.ng.core.activities.MainActivity.StartedPlaying"/>
+            </intent-filter>
+        </receiver>
+        
+        <!-- This static class will keep an eye when the following
+          -  activities happen.
+         -->
+        <receiver android:name="femi.com.ng.kure.musicplayer.services.ServicePlayMusic$ExternalBroadcastReceiver" >
+            <intent-filter>
+                <!-- Disconnected Headphones -->
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        
+</application>
+
+</manifest>

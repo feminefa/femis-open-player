@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="doNothing"
+    android:background="#E67300"
+    >   
+    
+		<LinearLayout 
+		     android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:orientation="vertical"
+		        android:gravity="center"
+                android:padding="40dp"
+		    >
+
+		<ImageView
+		    android:id="@+id/tag_progress_image"
+		    android:layout_width="wrap_content"
+		    android:layout_height="0dip"
+		    android:layout_marginTop="20dip"
+		    android:layout_marginBottom="10dip"
+		    android:layout_weight="5"
+		    android:scaleType="fitCenter"
+		    android:src="@drawable/big_logo2" />
+
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="0dip"
+		        android:layout_weight="2"
+		        android:gravity="top|center"
+		        android:orientation="vertical"
+		        android:padding="10dip" >
+
+				
+
+				<TextView 
+				    android:id="@+id/tagging_text"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textSize="16dip"
+				    android:textStyle="bold"
+				    android:textColor="#000000"
+				    android:text="@string/listen_instruction"
+				    android:gravity="center"
+				    />
+				<TextView 
+				    android:id="@+id/tagging_text_2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textSize="16dip"
+				    android:textStyle="bold|italic"
+				    android:textColor="#000000"
+				    android:text=""
+				    android:gravity="center"
+				    />
+    		</LinearLayout>
+    		 <RelativeLayout
+    		     android:layout_width="fill_parent"
+    		     android:layout_height="0dip"
+                 android:visibility="visible"
+                android:layout_weight="2"
+                   android:gravity="center_vertical">
+
+                 <LinearLayout
+                         android:layout_width="fill_parent"
+                         android:layout_height="1dip"
+                         android:background="@color/white"
+                         android:layout_centerInParent="true"
+
+                         />
+
+                 <!-- <LinearLayout
+                      android:layout_width="fill_parent"
+                      android:layout_height="5dip"
+                      android:background="@drawable/drop_shadow"
+                      android:visibility="gone"
+                     />
+                  <LinearLayout
+                      android:layout_width="fill_parent"
+                      android:layout_height="1dip"
+                      android:background="#FFCA95"
+                      android:visibility="gone"
+                    />
+                      -->
+
+				        <ImageView
+                            android:layout_alignParentRight="true"
+				            android:id="@+id/stop_tagging_button"
+				            android:layout_width="70dp"
+				            android:layout_height="wrap_content"
+				            android:layout_margin="3dip"
+				            android:scaleType="fitCenter"
+				            android:src="@drawable/x_white" />
+            </RelativeLayout>
+
+   
+     </LinearLayout> 
+</FrameLayout>

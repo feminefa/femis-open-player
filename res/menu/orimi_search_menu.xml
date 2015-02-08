@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:orimi="http://schemas.android.com/apk/orimi">
+     <item android:id="@+id/action_search"
+          android:icon="@drawable/ic_menu_search"
+          android:title="@string/search"
+          android:actionViewClass="com.actionbarsherlock.widget.SearchView"
+          orimi:actionViewClass="com.actionbarsherlock.widget.SearchView"
+          orimi:showAsAction="always"
+          android:showAsAction="always"
+
+             />
+</menu>
