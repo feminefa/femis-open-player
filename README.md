@@ -29,7 +29,7 @@ Extract generated files from zip and paste in the projects resource directory.</
 
 # Credits
 - Kure Music Player - https://github.com/alexdantas/kure-music-player forms the base of FOP with additional features and bug fixes.</br>
-- Jake Wharton - you are the bomb. Actionbarsherlock forms an integral part of the support library on FOP (for backwards compatibility with older devices)</br>
+- Jake Wharton - you are the bomb. Actionbarsherlock is an integral part of the support library on FOP (for backwards compatibility with older devices)</br>
 - Thank to Jérôme Van Der Linden the creator of http://android-holo-colors.com/ - Site aided so much in the theme creation. Nice job there.</br>
 - And other numerous websites and tutorials. stackoverflow.com is worth mentioning</br>
 
