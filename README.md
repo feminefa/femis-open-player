@@ -1,7 +1,11 @@
-# femis-open-player
+# Femis-open-player
 Free Audio Player for Android
 
 FOP allows you play and organize your audio files on you android device.
+
+# Download
+
+Get FOP from the google play store - https://play.google.com/store/apps/details?id=orimi.com.femi
 
 Features:
 
